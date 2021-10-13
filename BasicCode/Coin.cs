@@ -8,8 +8,8 @@ namespace BasicCode
 {
     class Coin
     {
-        public const int HEAD = 1;
-        public const int TAILS = 0;
+      //  public const int HEAD = 1;
+       // public const int TAILS = 0;
 
         public void flipCoin()
         {
@@ -26,20 +26,20 @@ namespace BasicCode
             {
                 int ranValue = r.Next(0, 2);
                 Console.WriteLine("random value:{0}", ranValue);
-                if (TAILS == ranValue)
+                if (ranValue < 0.5 )
                 {
                     t++;  // counting tails 
-                    per = (t / s) * 100; //calulating percentage of tails
+                    per = t / 100; //calulating percentage of tails
 
                 }
-                else if (HEAD == ranValue)
+                else 
                 {
                     h++;// caounting heads
-                    per1 = (h / s) * 100; // calulating percentage of heads
+                   per1 = h /  100; // calulating percentage of heads
                 }
             }
-            Console.WriteLine("the no of thime head is: {0} and percentage is :{1} ", h, Convert.ToDouble(per)); // displaying the heads and %
-            Console.WriteLine("the no of thime tail is : {0} and percentage is :{1}", t, Convert.ToDouble(per1)); // // displaying the tails and %
+            Console.WriteLine("the no of thime head is: {0} and percentage is :{1} ", h, per); // displaying the heads and %
+            Console.WriteLine("the no of thime tail is : {0} and percentage is :{1}", t,per1); // // displaying the tails and %
 
 
             Console.ReadLine();
